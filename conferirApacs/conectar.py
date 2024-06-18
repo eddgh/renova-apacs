@@ -1,3 +1,4 @@
+# inicio da conexao
 from selenium import webdriver
 
 #GeckoDriver = webdriver como um serviço (atualiza o geckodriver automaticamente)
@@ -12,8 +13,9 @@ from datetime import datetime
 from time import sleep
 
 options = Options()
-# options.add_argument('--headless') # executar o navegador de forma oculta
+options.add_argument('--headless') # executar o navegador de forma oculta
 
 # Firefox
 servico = Service(GeckoDriverManager().install())
 navegador = webdriver.Firefox(service=servico, options=options)
+# fim da conexao
